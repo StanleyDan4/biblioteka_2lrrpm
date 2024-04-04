@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="biblioteka_2lrrpm.Page1">
+    <StackLayout x:Name="NNN" BackgroundColor="Black" Margin="20">
+
+        <Entry x:Name="Int1" Placeholder="Login" />
+        <Entry x:Name="Int2" Placeholder="Password" IsPassword="True" />
+        <Entry x:Name="Int3" Placeholder="Confirm Password" IsPassword="True" />
+        <DatePicker x:Name="birthDatePicker" Date="{Binding BirthDate}" />
+        <Entry x:Name="Int4" Placeholder="Contact Information" />
+
+        <Picker x:Name="Int5" Title="Select Role">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Client</x:String>
+                    <x:String>Librarian</x:String>
+                    <x:String>Administrator</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Switch x:Name="Switch" IsToggled="false" Toggled="Switch_Toggled"/>
+        <Label x:Name="Int6" Text="Dark Theme" />
+
+        <Button x:Name="btn1" Text="Register" Clicked="OnRegisterButtonClicked" />
+        <Button x:Name="btn2" Text="Exit" Clicked="OnExitButtonClicked" />
+
+    </StackLayout>
+
+</ContentPage>
